@@ -9,7 +9,15 @@
     <h1 style="text-align: center;">Webboard KakKak</h1>
     <hr> 
     <div style="text-align: center;">
-        ต้องการดูกระทู้หมายเลข <?php echo $_GET['id']; ?>
+        <?php
+        $id=$_GET['id'];
+        echo "ต้องการดูกระทู้หมายเลข $id<br>";
+        if ($id%2==0){
+            echo "เป็นกระทู้หมายเลขคู่";
+        }else{
+            echo "เป็นกระทู้หมายเลขคี่";
+        }
+        ?>        
     </div>       
     <br>
     <table style="border: 2px solid black; width: 40%" align="center">
@@ -22,6 +30,6 @@
         </td></tr>
     </table>
     <br>
-    <div style="text-align: center;"><a href="index.html">กลับไปหน้าหลัก</a></div>
+    <div style="text-align: center;"><a href="index.php">กลับไปหน้าหลัก</a></div>
 </body>
 </html>
