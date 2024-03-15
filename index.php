@@ -10,6 +10,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <title>Webboard</title>
+    <script>
+        function myFunction(){
+            let r=confirm("ต้องการจะลบจริงหรือไม่?");
+            return r;
+        }
+    </script>
 </head>
 <body>
     <div class="container-lg">
@@ -56,7 +62,7 @@
                 style=text-decoration:none>$row[1]</a><br>$row[3] - $row[4]</div>";
                 if(isset($_SESSION['id']) && $_SESSION['role']=='a'){
                     echo "<div class='me-2 align-self-center'><a href=delete.php?id=$row[2] 
-                    class='btn btn-danger btn-sm'><i class='bi bi-trash'></i></a></div>";
+                    class='btn btn-danger btn-sm' onclick='return myFunction()'><i class='bi bi-trash'></i></a></div>";
                 }
                 echo "</td></tr>";
             }
