@@ -55,7 +55,7 @@
                 <div>[ $row[0] ] <a href=post.php?id=$row[2] 
                 style=text-decoration:none>$row[1]</a><br>$row[3] - $row[4]</div>";
                 if(isset($_SESSION['id']) && $_SESSION['role']=='a'){
-                    echo "<div class='me-2 mt-2'><a href=delete.php?id=$row[2] 
+                    echo "<div class='me-2 align-self-center'><a href=delete.php?id=$row[2] 
                     class='btn btn-danger btn-sm'><i class='bi bi-trash'></i></a></div>";
                 }
                 echo "</td></tr>";
